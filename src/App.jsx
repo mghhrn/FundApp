@@ -1,6 +1,7 @@
 // App.jsx
 import React, { useState } from "react";
 import "./App.css";
+import { TonConnectButton } from '@tonconnect/ui-react';
 
 function App() {
   const [isWalletConnected, setWalletConnected] = useState(false);
@@ -18,9 +19,7 @@ function App() {
     <div className="App">
       <header className="header">
         <h1>FundApp</h1>
-        <button onClick={handleConnectWallet} className="wallet-button">
-          {isWalletConnected ? "Wallet Connected" : "Connect Wallet"}
-        </button>
+        <TonConnectButton />
       </header>
 
       <div className="card-container">
